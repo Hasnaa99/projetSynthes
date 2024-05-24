@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('groupe_formateurs', function (Blueprint $table) {
+        Schema::create('formateur_groupe', function (Blueprint $table) {
             $table->unsignedBigInteger('groupe_id');
             $table->unsignedBigInteger('formateur_id');
             $table->foreign('formateur_id')->references('id')->on('formateurs')->onDelete('cascade');

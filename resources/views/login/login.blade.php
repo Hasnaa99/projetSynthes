@@ -69,9 +69,9 @@
                 @csrf
                 <H1 class='text-center titre'>Authentification</H1>
                 <div class="mb-4">
-                    <label htmlFor="email" class="form-label">Login</label>
-                    <input type="email" class="form-control" id="email" name="email" value="{{ old('email') }}"
-                        required autocomplete="email" autofocus />
+                    <label htmlFor="matricule" class="form-label">Login</label>
+                    <input type="text" class="form-control" id="matricule" name="matricule" value="{{ old('matricule') }}"
+                        required autocomplete="matricule" autofocus />
                 </div>
 
                 <div class="mb-4">

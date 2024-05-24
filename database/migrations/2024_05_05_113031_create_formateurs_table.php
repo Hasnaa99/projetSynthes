@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('formateurs', function (Blueprint $table) {
             $table->id();
-            $table->integer("codeF")->unique();
+            $table->string("matricule")->unique();
             $table->string("nom",50);
             $table->string("prenom",50);
             $table->string("cin",50);

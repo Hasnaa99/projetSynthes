@@ -21,7 +21,7 @@ class FormateurFactory extends Factory
     {
         return [
             //
-            "codeF" => fake()->numberBetween(1000,2000),
+            "matricule" => fake()->numberBetween(10000,20000),
             "nom" => fake()->firstName(),
             "prenom" => fake()->lastName(),
             "cin" => fake()->randomLetter . fake()->randomNumber(6, true),

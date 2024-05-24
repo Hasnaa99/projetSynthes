@@ -10,10 +10,17 @@ class Formateur extends Model implements Authenticatable
 {   use AuthenticatableTrait;
     use HasFactory;
 
-    protected $fillable = ["codeF", "nom", "prenom", "cin", "email", "password", "date_embauche"];
+    protected $fillable = ["matricule", "nom", "prenom", "cin", "email", "password", "date_embauche"];
 
     //Formateur encadre plusiairs groupe
-    public function groupes(){
-        return $this->belongsToMany(Groupe::class);
+    public function groupes()
+    {
+        return $this->belongsToMany(Groupe::class, 'formateur_groupe')->withTimestamps();
+    }
+    public function modules()
+    {
+        return $this->belongsToMany(Module::class, 'formateur_groupe_module')
+                    ->withPivot('groupe_id')
+                    ->withTimestamps();
     }
 }
